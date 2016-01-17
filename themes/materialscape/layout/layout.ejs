@@ -1,0 +1,17 @@
+<%- partial('_partial/head') %>
+<body>
+  <div class="container">
+    <div class="page-wrap">
+      <header class="page-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+        <%- partial('_partial/top-nav', null, {cache: !config.relative_link}) %>
+      </header>
+      <div class="pattern"></div>
+      <main class="page-main<% if(is_archive()) {%> page-archive<% } %>" role="main" tabindex="-1">
+        <%- body %>
+      </main>
+    </div>
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/after-footer') %>
+  </div>
+</body>
+</html>

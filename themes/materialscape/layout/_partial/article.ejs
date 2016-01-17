@@ -1,0 +1,90 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><% if (index){ %> article-list-part<% } %>" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="<%- url_for(post.path) %>">
+  <nav>
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <%- partial('post/date', {class_name: 'breadcrumb', date_format: null}) %>
+        <% if (post.categories && post.categories.length){ %>
+          <%- list_categories(post.categories, {
+            show_count: false,
+            class: 'hide-on-med-and-down breadcrumb breadcrumb',
+            style: 'none',
+            separator: '',
+          }) %>
+        <% } %>
+        <span class="hide" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <span itemprop="name">
+            <a class="breadcrumb" href="<%= config.googleplus %>" itemprop="url" rel="author"><%= config.author %></a>
+          </span>
+        </span>
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="<%= config.title %>">
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="article-inner">
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <%- post.content %>
+    </div>
+    <footer class="article-footer">
+      <div class="row">
+        <div class="col s6">
+        <% if (post.tags && post.tags.length){ %>
+          <%- list_tags(post.tags, {
+            show_count: false,
+            class: 'article-tag'
+          }) %>
+        <% } %>
+        &nbsp;
+        </div>
+        <div class="col s6 right-align">
+          <div class="article-footer-right">
+            <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">share</a> or <a href="<%= config.repo_url %>/edit/master/source/<%= post.source %>" class="article-suggest-modification">suggest a modification</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <% if (!index){ %>
+    <div class="row">
+      <% if (post.prev){ %>
+        <div class="col s12 m6 push-m6">
+          <div class="post-nav">
+            <div class="post-nav-title blue-grey darken-1 right center-align">
+              <span class="white-text">Newer</span>
+            </div>
+            <div class="post-nav-content clear right-align">
+              <a href="<%- url_for(post.prev.path) %>">
+                <% if (post.prev.title){ %>
+                  <%= post.prev.title %>
+                <% } else { %>
+                  (no title)
+                <% } %>
+              </a>
+            </div>
+          </div>
+        </div>
+      <% } %>
+      <% if (post.next){ %>
+        <div class="col s12<% if (post.prev){ %> m6 pull-m6<% } %>">
+          <div class="post-nav">
+            <div class="post-nav-title blue-grey darken-1 left center-align">
+              <span class="white-text">Older</span>
+            </div>
+            <div class="post-nav-content clear">
+              <a href="<%- url_for(post.next.path) %>">
+                <%= post.next.title %>
+              </a>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  <% } %>
+</article>

@@ -1,0 +1,40 @@
+<div class="row">
+<% if (site.categories.length){ %>
+  <div class="col l3 s12">
+    <h5 class="white-text">Categories</h5>
+    <p class="grey-text text-lighten-4">
+      <%- list_categories() %>
+    </p>
+  </div>
+<% } %>
+<% if (site.tags.length){ %>
+  <div class="col l3 s12">
+    <h5 class="white-text">Tags</h5>
+    <p class="grey-text text-lighten-4">
+      <%- list_tags() %>
+    </p>
+  </div>
+<% } %>
+<% if (site.posts.length){ %>
+  <div class="col l3 s12">
+    <h5 class="white-text">Archives</h5>
+    <p class="grey-text text-lighten-4">
+      <%- list_archives() %>
+    </p>
+  </div>
+<% } %>
+<% if (site.posts.length){ %>
+  <div class="col l3 s12">
+    <h5 class="white-text">Recent posts</h5>
+    <p class="grey-text text-lighten-4">
+      <ul>
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </p>
+  </div>
+<% } %>
+</div>

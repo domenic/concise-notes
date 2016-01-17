@@ -1,0 +1,91 @@
+@import "materialize/materialize.css"
+@import "nib"
+@import "_variables"
+@import "_util/mixin"
+@import "_fonts"
+
+body
+  background-color: body-background-color
+
+.container
+  max-width: 1160px !important
+
+.page-main
+  background-color: #fafafa
+  outline: none
+
+a
+  color: link-color
+
+h1
+  font-size: 3.2rem
+h2
+  font-size: 2.7rem
+h3
+  font-size: 2.4rem
+h4
+  font-size: 1.8rem
+h5
+  font-size: 1.6rem
+h6
+  font-size: 1.2rem
+
+nav
+  background-color: #fff
+  box-shadow: none
+  .nav-wrapper
+    nav
+      ul
+        margin-right: 50px
+  a
+    color: font-color
+  ul
+    a
+      color: font-color
+  .brand-logo
+    margin: 17px 0 0 50px
+    letter-spacing: -3.2px
+
+.breadcrumb, .breadcrumb:before
+  color: font-color
+
+.breadcrumb:before {
+  content: '\f101'
+  vertical-align: middle
+  display: inline-block
+  font-family: FontAwesome
+  font-weight: 400
+  font-style: normal
+  font-size: 13px
+  margin: 0 10px 0 8px
+  -webkit-font-smoothing: antialiased
+}
+
+.container
+  background-color: body-background-color
+
+.page-wrap
+  margin: 50px 0
+
+.page-header
+  top-and-sides-shadow()
+  border-color: #e3e3e3
+
+.pattern
+  height: 210px
+  pattern()
+  sides-shadow()
+
+.hide
+  display: none
+
+.clear
+  clear: both
+
+@import "_partial/header"
+@import "_partial/article"
+@import "_partial/archive"
+@import "_partial/footer"
+@import "_partial/footer-content"
+@import "_partial/highlight"
+@import "_partial/media-queries"
