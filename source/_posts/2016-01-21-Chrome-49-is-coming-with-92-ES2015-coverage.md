@@ -13,7 +13,7 @@ categories:
 
 December 11, Chrome 49 landed on the Dev channel. This week, with already [two new releases of Chrome 49](https://googlechromereleases.blogspot.com) to the Dev channel, the process seems to intensify.
 
-On Tuesday [Seth Thompson](http://seththompson.org), who works on V8, [wrote on HN](https://news.ycombinator.com/item?id=10932790) that *V8 now has 92% ES6 coverage in Chrome Canary (on track for shipping in Chrome M49)!*
+On Tuesday [Seth Thompson](http://seththompson.org), who works on V8, [wrote on HN](https://news.ycombinator.com/item?id=10932790) that "V8 now has 92% ES6 coverage in Chrome Canary (on track for shipping in Chrome M49)!"
 
 kangax' awesome [ECMAScript compatibility table](http://kangax.github.io/compat-table/es6/#chrome49) is already up to date, and Chrome 49's column looks very green indeed.
 
