@@ -12,7 +12,10 @@ commit() {
     git commit -m "${message[*]}"
 }
 
-hexo generate --force && \
+git add --all && \
+commit $1 && \
+git push && \
+hexo generate && \
 cd public && \
 git pull && \
 git add --all && \
