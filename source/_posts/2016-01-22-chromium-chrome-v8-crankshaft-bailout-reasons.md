@@ -44,10 +44,11 @@ A function which gets optimized can run 100x faster, meaning that it's kind of w
 
 I'll most probably write a follow up about TurboFan -the new V8 JavaScript optimizing compiler- and what it brings to the table.
 
-*References on this subject: [#3][3], [#4][4], [#5][5]*
+*References on this subject: [#3][3], [#4][4], [#5][5], [#6][6]*
 
 [1]: https://en.wikipedia.org/wiki/Chromium_(web_browser)
 [2]: https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
 [3]: http://blog.chromium.org/2010/12/new-crankshaft-for-v8.html
 [4]: https://github.com/GoogleChrome/devtools-docs/issues/53
 [5]: https://github.com/petkaantonov/bluebird/wiki/Optimization-killers
+[6]: http://thibaultlaurens.github.io/javascript/2013/04/29/how-the-v8-engine-works/
