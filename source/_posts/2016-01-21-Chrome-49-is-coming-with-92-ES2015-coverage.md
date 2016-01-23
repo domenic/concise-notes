@@ -17,7 +17,7 @@ On Tuesday [Seth Thompson](http://seththompson.org), who works on V8, [wrote on 
 
 kangax' awesome [ECMAScript compatibility table](http://kangax.github.io/compat-table/es6/#chrome49) is already up to date, and Chrome 49's column looks very green indeed.
 
-Since I talked about both optimizing **rest parameters** in Babel ([#1][1], [#2][2]) and **[V8 bailout reasons](https://github.com/vhf/V8-Crankshaft-bailout-reasons/)** ([#3][3], [#1][1], [#2][2]) on this blog, I thought I would look into it again.
+Since I talked about both optimizing **rest parameters** in Babel ([#1][1], [#2][2]) and **[V8 bailout reasons](https://github.com/vhf/v8-bailout-reasons)** ([#3][3], [#1][1], [#2][2]) on this blog, I thought I would look into it again.
 
 The upcoming version of V8 does support rest parameters, and that's awesome! But Crankshaft bails out when it encounters one of them ([#4][4]) instead of optimizing your function, and that's less awesome. But the engineer who introduced this bailout said ([#5][5]) they will be optimized by TurboFan instead, awesome again! (He even hinted that all currently "unsafe" usages of the `arguments` object will be optimized, and that's *very awesome*!)
 

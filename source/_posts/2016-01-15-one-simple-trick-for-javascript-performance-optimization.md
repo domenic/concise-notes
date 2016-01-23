@@ -22,7 +22,7 @@ Documentation on these bailout reasons are very scarce, so Wednesday I decided t
 
 As of the writing of this post, I was only able to partially document 8 of them. I have more material but need more research/more time.
 
-If you'd like to see what I got and to contribute your awesome V8 knowledge, please see **[V8 Crankshaft bailout reasons](https://github.com/vhf/V8-Crankshaft-bailout-reasons)** on GitHub.
+If you'd like to see what I got and to contribute your awesome V8 knowledge, please see **[V8 bailout reasons](https://github.com/vhf/v8-bailout-reasons)** on GitHub.
 
 But I didn't make you read all this for nothing. In the title of this post I made a promise I intend to fulfill, so here is...
 

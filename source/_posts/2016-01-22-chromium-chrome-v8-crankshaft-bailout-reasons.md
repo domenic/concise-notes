@@ -33,12 +33,11 @@ Optimizing the JavaScript is always a tradeoff. We want both fast loading pages 
 
 When the optimizing compiler gets to work, it makes optimistic assumptions about the code it's optimizing, meaning that it assumes it's optimizable and does its best.
 
-In some cases, the runtime data (e.g. type information) provided by the base compiler to the optimizing compiler didn't cover some (edge) cases and the optimizing compiler sends V8 back to run the base compiler compiled code. This is known as a *deopt*. Later on, the same hot code will be fed to the optimizing compiler again with more runtime data, and could eventually succeed its optimization attemps.
+In some cases, the runtime data (e.g. type information) provided by the base compiler to the optimizing compiler didn't cover some (edge) cases and the optimizing compiler sends V8 back to run the base compiler compiled code. This is known as a *deopt*. Later on, the same hot code will be fed to the optimizing compiler again with more runtime data, and could eventually succeed its optimization attemps. If it fails more than 10 times, it will give up with the following bailout reason: "[Optimized too many times](https://github.com/vhf/v8-bailout-reasons#optimized-too-many-times)"
 
 In some other cases, the optimizing compiler receives code that contains JavaScript features (such as `try...catch` statements) it doesn't support, or the code doesn't respect [some limits](/blog/2016/01/15/one-simple-trick-for-javascript-performance-optimization/) set by the optimizing compiler. In this case, the optimizing compiler will also fall back to the base compiler compiled code. This is known as a *bailout* (because the optimizing compiler bails out on his optimization attempt), and whenever it happens Crankshaft is kind enough to give us a reason why the bailout happened.
 
-This repo lists all these bailout reasons: [V8 Crankshaft bailout reasons
-](https://github.com/vhf/V8-Crankshaft-bailout-reasons). The aim of this project is to provide insights by reproducing most of them, explaining why they happened and how to avoid them.
+This repo lists all these bailout reasons: [V8 bailout reasons](https://github.com/vhf/v8-bailout-reasons). The aim of this project is to provide insights by reproducing most of them, explaining why they happened and how to avoid them.
 
 A function which gets optimized can run 100x faster, meaning that it's kind of wise to learn about these bailout patterns to best avoid them if you care about the JavaScript performances of the code you run on V8 (for instance if you target Chromium/Chrome, Node.js or Opera).
 
