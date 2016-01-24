@@ -38,4 +38,4 @@ Stick to 511 parameters (or less).
 - 511 is a good-looking number. In unicode, it looks really really good: &#511;
 - A function with 511 parameters always looks better than a function with 512 parameters. (I have discovered a truly remarkable proof which this margin is too small to contain.)
 
-*Note: I originally wrote this article with 65535 instead of 512. I did not pay enough attention while reading V8 source code. It was 65535 bits, i.e. 512 bytes, or 512 parameters. Not 65535 parameters.*
+*Note: I originally wrote this article with 65535 instead of 512. I did not pay enough attention while reading V8 source code. It was 65535 bits, i.e. 512 bytes, or 512 parameters. Not 65535 parameters. [Review the diff](https://github.com/vhf/concise-notes/commit/88fc535cbe23a567ddd3e65f8f64c6590936a51b).*
