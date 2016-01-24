@@ -16,6 +16,7 @@
     "hexo-generator-sitemap": "^1.0.1",
     "hexo-generator-tag": "^0.1.2",
     "hexo-html-minifier": "git+https://github.com/vhf/hexo-html-minifier.git",
+    "hexo-pagination": "0.0.2",
     "hexo-renderer-ejs": "^0.1.1",
     "hexo-renderer-marked": "^0.2.7",
     "hexo-renderer-stylus": "^0.3.0",

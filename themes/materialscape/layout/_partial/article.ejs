@@ -1,4 +1,4 @@
-<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><% if (index){ %> article-list-part<% } %>" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="<%- url_for(post.path) %>">
   <nav>
     <div class="nav-wrapper">
@@ -51,40 +51,38 @@
       </div>
     </footer>
   </div>
-  <% if (!index){ %>
-    <div class="row">
-      <% if (post.prev){ %>
-        <div class="col s12 m6 push-m6">
-          <div class="post-nav">
-            <div class="post-nav-title blue-grey darken-1 right center-align">
-              <span class="white-text">Newer</span>
-            </div>
-            <div class="post-nav-content clear right-align">
-              <a href="<%- url_for(post.prev.path) %>">
-                <% if (post.prev.title){ %>
-                  <%= post.prev.title %>
-                <% } else { %>
-                  (no title)
-                <% } %>
-              </a>
-            </div>
+  <div class="row post-navigation">
+    <% if (post.prev){ %>
+      <div class="col s12 m6 push-m6">
+        <div class="post-nav">
+          <div class="post-nav-title blue-grey darken-1 right center-align">
+            <span class="white-text">Newer</span>
+          </div>
+          <div class="post-nav-content clear right-align">
+            <a href="<%- url_for(post.prev.path) %>">
+              <% if (post.prev.title){ %>
+                <%= post.prev.title %>
+              <% } else { %>
+                (no title)
+              <% } %>
+            </a>
           </div>
         </div>
-      <% } %>
-      <% if (post.next){ %>
-        <div class="col s12<% if (post.prev){ %> m6 pull-m6<% } %>">
-          <div class="post-nav">
-            <div class="post-nav-title blue-grey darken-1 left center-align">
-              <span class="white-text">Older</span>
-            </div>
-            <div class="post-nav-content clear">
-              <a href="<%- url_for(post.next.path) %>">
-                <%= post.next.title %>
-              </a>
-            </div>
+      </div>
+    <% } %>
+    <% if (post.next){ %>
+      <div class="col s12<% if (post.prev){ %> m6 pull-m6<% } %>">
+        <div class="post-nav">
+          <div class="post-nav-title blue-grey darken-1 left center-align">
+            <span class="white-text">Older</span>
+          </div>
+          <div class="post-nav-content clear">
+            <a href="<%- url_for(post.next.path) %>">
+              <%= post.next.title %>
+            </a>
           </div>
         </div>
-      <% } %>
-    </div>
-  <% } %>
+      </div>
+    <% } %>
+  </div>
 </article>

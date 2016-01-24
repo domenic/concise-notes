@@ -65,7 +65,7 @@ nav
   background-color: body-background-color
 
 .page-wrap
-  margin: 50px 0
+  margin: 50px 0 30px
 
 .page-header
   top-and-sides-shadow()
@@ -76,6 +76,9 @@ nav
   pattern()
   sides-shadow()
 
+.article-description-link
+  color: font-color
+
 .hide
   display: none
 
@@ -84,8 +87,10 @@ nav
 
 @import "_partial/header"
 @import "_partial/article"
+@import "_partial/home"
 @import "_partial/archive"
 @import "_partial/footer"
 @import "_partial/footer-content"
 @import "_partial/highlight"
+@import "_partial/pagination"
 @import "_partial/media-queries"

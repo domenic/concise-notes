@@ -1,0 +1,29 @@
+.page-navigation
+  color: font-color
+  padding: 0 50px
+  sides-shadow()
+  top-and-sides-shadow()
+
+  span, a
+    display: inline-block
+    font-size: 1.2rem
+    padding: 0 10px
+    line-height: 30px
+    border-radius: 2px
+    text-align: center
+
+  span.current
+    background-color: font-color
+    color: #fff
+
+  a
+    color: #444
+    &.prev:before
+      font-family: FontAwesome
+      content: '\f053'
+      vertical-align: middle
+
+    &.next:after
+      font-family: FontAwesome
+      content: '\f054'
+      vertical-align: middle

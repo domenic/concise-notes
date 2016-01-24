@@ -1,5 +1,5 @@
 title: Comment Syntax in Programming Languages (and the Eye of Osiris)
-description: Wadler's law is bikeshedding applied to programming languages design. Agreeing on the use of the Eye of Osiris would (not) be an elegant way to settle this debate.
+description: Wadler's law is bikeshedding applied to programming languages design.
 date: 2016-01-13 19:19:19
 tags:
 - programming language design
