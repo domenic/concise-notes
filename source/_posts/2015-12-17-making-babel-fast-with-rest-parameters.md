@@ -1,12 +1,13 @@
-title: "Making Babel fast with ES2015 rest parameters"
+title: Making Babel fast with ES2015 rest parameters
+description: What I did to help avoid bailouts on rest parameters transpilation.
 date: 2015-12-17 13:36:59
-description: How I increased Babel ES2015 performances with two simple patches and some research
 tags:
 - javascript
 - es2015
 - babel
 - nodejs
 - crankshaft
+- v8
 categories:
 - programming
 - JavaScript

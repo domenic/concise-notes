@@ -1,12 +1,13 @@
 title: "JavaScript performance with Babel and Node.js: a case against default parameters in tail call optimizations"
-date: 2015-11-02 13:36:59
 description: Babel might prevent some V8 optimizations to happen. Also, have you heard about Unsupported Phi Use of Arguments?
+date: 2015-11-02 13:36:59
 tags:
 - javascript
 - es2015
 - babel
 - nodejs
 - crankshaft
+- v8
 categories:
 - programming
 - JavaScript

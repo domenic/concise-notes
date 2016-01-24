@@ -1,7 +1,8 @@
 title: Chromium, Chrome, Node.js, V8, Crankshaft and bailout reasons
+description: A short summary about these terms, an overview of how V8 / Crankshaft works.
 date: 2016-01-22 20:20:20
 tags:
-    - V8
+    - v8
     - javascript
     - es2015
     - nodejs

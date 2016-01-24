@@ -1,6 +1,6 @@
 title: ES6 Destructuring
+description: A few things about destructuring and assigning default values.
 date: 2015-10-28 15:29:42
-description: destructuring and assigning default values
 tags:
 - javascript
 - es2015

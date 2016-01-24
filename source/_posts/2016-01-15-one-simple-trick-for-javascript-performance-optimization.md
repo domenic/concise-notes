@@ -1,4 +1,5 @@
-title: "One Simple Trick for JavaScript Performance Optimization"
+title: One Simple Trick for JavaScript Performance Optimization
+description: My attempt at clickbait. Also, an interesting (who said "useless") JS performance tip.
 date: 2016-01-15 01:20:12
 tags:
 - javascript

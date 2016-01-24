@@ -1,6 +1,6 @@
 title: JavaScript Promises
+description: Promises, and what bluebird can do to help.
 date: 2015-10-27 19:37:41
-description: promises, bluebird, etc
 tags:
 - javascript
 - es2015

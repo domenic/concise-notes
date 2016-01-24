@@ -1,4 +1,5 @@
 title: Modifying or Deleting a Line from an Old Commit
+description: Here's how. But seriously, you probably shouldn't do it.
 date: 2016-01-20 23:59:59
 tags:
 - git
