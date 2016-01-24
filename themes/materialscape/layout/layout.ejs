@@ -6,7 +6,7 @@
         <%- partial('_partial/top-nav', null, {cache: !config.relative_link}) %>
       </header>
       <div class="pattern"></div>
-      <main class="page-main<% if(is_archive()) {%> page-archive<% } %>" role="main" tabindex="-1">
+      <main class="page-main<%= (is_post() || is_home()) ? '' : ' page-archive' %>" role="main" tabindex="-1">
         <%- body %>
       </main>
     </div>
