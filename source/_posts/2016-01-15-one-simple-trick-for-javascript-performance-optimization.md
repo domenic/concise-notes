@@ -29,11 +29,13 @@ But I didn't make you read all this for nothing. In the title of this post I mad
 
 ### One Simple Trick for JavaScript Performance Optimization
 
-Don't use more than 65535 parameters in a single JavaScript function. Otherwise, Crankshaft will bail out with the following informative message: "Too many parameters."
+Don't use more than ~~65535~~ 512 parameters in a single JavaScript function. Otherwise, Crankshaft will bail out with the following informative message: "Too many parameters."
 
 #### How can I fix my JavaScript code to make it run blazingly fast?
 
-Stick to 65534 parameters (or less).
+Stick to 511 parameters (or less).
 
-- 65534 is a good-looking number. It's (2 + 1)(4 + 1)(16 + 1)(256 + 1) - 1.
-- A function with 65534 parameters always looks better than a function with 65535 parameters. (I could show you why but I'm too lazy to generate one.)
+- 511 is a good-looking number. In unicode, it looks really really good: &#511;
+- A function with 511 parameters always looks better than a function with 512 parameters. (I have discovered a truly remarkable proof which this margin is too small to contain.)
+
+*Note: I originally wrote this article with 65535 instead of 512. I did not pay enough attention while reading V8 source code. It was 65535 bits, i.e. 512 bytes, or 512 parameters. Not 65535 parameters.*
