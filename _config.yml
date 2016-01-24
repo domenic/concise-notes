@@ -76,18 +76,18 @@ sitemap:
 html_minifier:
   priority: 10
   exclude:
-  removeComments: true
-  removeCommentsFromCDATA: true
-  removeCDATASectionsFromCDATA: true
+  removeComments: false
+  removeCommentsFromCDATA: false
+  removeCDATASectionsFromCDATA: false
   collapseWhitespace: true
-  conservativeCollapse: true
+  conservativeCollapse: false
   preserveLineBreaks: true
-  collapseBooleanAttributes: true
+  collapseBooleanAttributes: false
   removeAttributeQuotes: false
-  removeRedundantAttributes: true
+  removeRedundantAttributes: false
   preventAttributesEscaping: false
   useShortDoctype: false
-  removeEmptyAttributes: true
+  removeEmptyAttributes: false
   removeScriptTypeAttributes: false
   removeStyleLinkTypeAttributes: false
   removeOptionalTags: false

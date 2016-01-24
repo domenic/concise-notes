@@ -6,6 +6,7 @@ tags:
 - es2015
 - babel
 - nodejs
+- crankshaft
 categories:
 - programming
 - JavaScript
