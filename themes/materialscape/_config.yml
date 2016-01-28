@@ -1,5 +1,6 @@
 menu:
   Archives: archives
+  Contact: contact
   About: 'https://vhf.github.io'
 
 rss: atom.xml

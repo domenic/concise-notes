@@ -6,7 +6,8 @@ display_usage() {
     echo "Usage: $0 [arguments]"
     echo
     echo "1/ $0 dev"
-    echo "2/ $0 commit \"message\" [--force]"
+    echo "2/ $0 testprod"
+    echo "3/ $0 commit \"message\" [--force]"
 }
 
 
@@ -32,9 +33,18 @@ dev() {
     hexo --debug --config _config_dev.yml serve
 }
 
+testprod() {
+    rm debug.log;
+    hexo --debug --config _config.yml serve
+}
+
 case "$1" in
     "dev" )
         dev
+    ;;
+
+    "testprod" )
+        testprod
     ;;
 
     "commit" )

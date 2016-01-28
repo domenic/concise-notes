@@ -69,3 +69,6 @@ theme: materialscape
 # Hexo Sitemap
 sitemap:
   path: sitemap.xml
+
+uncss:
+  enable: false

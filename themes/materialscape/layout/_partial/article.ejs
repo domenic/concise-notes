@@ -3,7 +3,9 @@
   <nav>
     <div class="nav-wrapper">
       <div class="col s12">
-        <%- partial('post/date', {class_name: 'breadcrumb', date_format: null}) %>
+        <% if (page != true) { %>
+          <%- partial('post/date', {class_name: 'breadcrumb', date_format: null}) %>
+        <% } %>
         <% if (post.categories && post.categories.length){ %>
           <%- list_categories(post.categories, {
             show_count: false,
@@ -43,11 +45,13 @@
         <% } %>
         &nbsp;
         </div>
+        <% if (page != true) { %>
         <div class="col s6 right-align">
           <div class="article-footer-right">
             <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">share</a> or <a href="<%= config.repo_url %>/edit/master/source/<%= post.source %>" class="article-suggest-modification">suggest a modification</a>
           </div>
         </div>
+        <% } %>
       </div>
     </footer>
   </div>

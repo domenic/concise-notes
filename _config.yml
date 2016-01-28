@@ -116,6 +116,7 @@ uncss:
     - '.article-share-facebook'
     - '.article-share-pinterest'
     - '.article-share-google'
+    - '.input-field label.active'
 # Hexo clean css
 # Minify **after** uncss
 clean_css:
