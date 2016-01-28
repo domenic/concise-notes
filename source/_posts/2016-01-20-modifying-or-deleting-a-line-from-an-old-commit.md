@@ -8,8 +8,8 @@ tags:
 I'll spare you and assume you know what you're doing, so here's the short version. Keep reading for a more comprehensive one.
 
 1. Find the commit you want to change or delete
-2. Get the SHA of its child commit.
-2. `git rebase -i 1a2b3c4d` (1a2b3c4d is the child)
+2. Get the SHA of its parent commit.
+2. `git rebase -i 1a2b3c4d` (1a2b3c4d is the parent)
 3. Replace `pick` with `edit`
 4. `git add yourfile`
 5. `git commit --amend`
@@ -38,12 +38,12 @@ So for the sake of the demonstration, and because I used this post as an excuse 
   * If you know the commit content, `git grep mysecret $(git rev-list --all)`
   * If you know which file contains your secret, `git blame file`, find line, get SHA, checkout SHA, blame, repeat until you get the first commit introducing the secret (don't settle for the 20 following commits fiddling with this line's whitespaces).
   * Choose whatever option gets you the SHA the quickest. The order listed here is not that bad in my opinion. So, your secret first appeared in your git repository at commit `054f345865f8f5a319dc05fcfa6cf9b76541e229`
-2. You actually need the SHA of the child commit. The commit that came directly after the one you want to modify or get rid of.
+2. You actually need the SHA of the previous commit (parent commit). The commit that came directly before the one you want to modify or get rid of.
   * `git rev-list --all | grep 054f345865f8f5a319dc05fcfa6cf9b76541e229 -A1 | tail -n1`
-  * So, the child is `e20645764ce6419e348e6c1b5dea2348e18d050f`
-3. We will rebase after the child.
+  * So, the parent is `e20645764ce6419e348e6c1b5dea2348e18d050f`
+3. We will use the parent as rebase starting point, meaning our bad commit will be the first one in the rebase process.
   * `git rebase -i e20645764ce6419e348e6c1b5dea2348e18d050f`
-4. The first line should be the one for your "bad" commit: `pick 054f345 versioning secret stuff!`
+4. The first line should be your "bad" commit: `pick 054f345 versioning secret stuff!`
   * Replace `pick` with `edit`.
   * Close the editor to start rebasing.
 5. Your repo is now at the bad commit. Edit `yourfile` and remove your secret from it. Or delete `yourfile`.
