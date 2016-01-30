@@ -11,7 +11,7 @@ categories:
 
 If you ever maintained a popular GitHub project, you might have suffered from a couple of things:
 
-* Your GitHub news feed became [useless](/blog/images/github-feed.png) because stars, issues/PR comments, wiki edits notifications were burying the notifications you were interested in in an endless flood.
+* Your GitHub news feed became [useless](/images/github-feed.png) because stars, issues/PR comments, wiki edits notifications were burying the notifications you were interested in in an endless flood.
 * You spent a lot of time repeating the same things over and over on your project's issues or PRs, such as *Thanks for your contribution! Please read the [Formatting section of our `CONTRIBUTING.md`](https://github.com/vhf/free-programming-books/blob/master/CONTRIBUTING.md#formatting) and fix your PR accordingly.* (While still adding a custom comment to each contributor pointing them at what they did wrong or how they can fix it, of course.)
 
 And since we spend so much time on GitHub, why not also customizing it in some fun ways?
