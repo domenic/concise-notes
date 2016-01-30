@@ -2,11 +2,11 @@ title: Chrome 49 is coming, with 92% ES2015 coverage!
 description: It's coming, it's awesome, but some features might still be worth transpiling.
 date: 2016-01-21 21:53:35
 tags:
-    - v8
-    - javascript
-    - es2015
-    - nodejs
-    - crankshaft
+- v8
+- javascript
+- es2015
+- nodejs
+- crankshaft
 categories:
 - programming
 - JavaScript

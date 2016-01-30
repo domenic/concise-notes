@@ -2,11 +2,11 @@ title: Chromium, Chrome, Node.js, V8, Crankshaft and bailout reasons
 description: A short summary about these terms, an overview of how V8 / Crankshaft works.
 date: 2016-01-22 20:20:20
 tags:
-    - v8
-    - javascript
-    - es2015
-    - nodejs
-    - crankshaft
+- v8
+- javascript
+- es2015
+- nodejs
+- crankshaft
 categories:
 - programming
 - JavaScript
@@ -36,7 +36,7 @@ When the optimizing compiler gets to work, it makes optimistic assumptions about
 
 In some cases, the runtime data (e.g. type information) provided by the base compiler to the optimizing compiler didn't cover some (edge) cases and the optimizing compiler sends V8 back to run the base compiler compiled code. This is known as a *deopt*. Later on, the same hot code will be fed to the optimizing compiler again with more runtime data, and could eventually succeed its optimization attemps. If it fails more than 10 times, it will give up with the following bailout reason: "[Optimized too many times](https://github.com/vhf/v8-bailout-reasons#optimized-too-many-times)"
 
-In some other cases, the optimizing compiler receives code that contains JavaScript features (such as `try...catch` statements) it doesn't support, or the code doesn't respect [some limits](/blog/2016/01/15/one-simple-trick-for-javascript-performance-optimization/) set by the optimizing compiler. In this case, the optimizing compiler will also fall back to the base compiler compiled code. This is known as a *bailout* (because the optimizing compiler bails out on his optimization attempt), and whenever it happens Crankshaft is kind enough to give us a reason why the bailout happened.
+In some other cases, the optimizing compiler receives code that contains JavaScript features (such as `try...catch` statements) it doesn't support, or the code doesn't respect [some limits](/2016/01/15/one-simple-trick-for-javascript-performance-optimization/) set by the optimizing compiler. In this case, the optimizing compiler will also fall back to the base compiler compiled code. This is known as a *bailout* (because the optimizing compiler bails out on his optimization attempt), and whenever it happens Crankshaft is kind enough to give us a reason why the bailout happened.
 
 This repo lists all these bailout reasons: [V8 bailout reasons](https://github.com/vhf/v8-bailout-reasons). The aim of this project is to provide insights by reproducing most of them, explaining why they happened and how to avoid them.
 

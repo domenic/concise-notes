@@ -11,7 +11,6 @@ tags:
 categories:
 - programming
 - JavaScript
-canonical: "https://medium.com/@vhf/javascript-performance-with-babel-and-node-js-33673db55077"
 ---
 
 Disclaimer:
