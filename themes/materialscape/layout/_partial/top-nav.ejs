@@ -4,7 +4,7 @@
     <meta itemprop="description" content="<%= config.author_meta %>'s blog">
     <a href="#" id="mobile-menu" class="hide-on-med-and-up menu-icon"></a>
     <nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-      <ul class="right hide-on-med-and-down">
+      <ul class="right hide-on-small-only">
         <li><a class="main-nav-link" href="<%= config.root %>">Home</a></li>
         <% for (var i in theme.menu){ %>
           <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
@@ -12,15 +12,6 @@
         <% if (theme.rss){ %>
           <li><a class="rss-icon" href="<%= config.root %><%- theme.rss %>" title="RSS Feed"></a></li>
         <% } %>
-      </ul>
-    </nav>
-    <nav class="side-nav">
-      <ul id="nav-mobile">
-        <li><a class="main-nav-link" href="<%= config.root %>">Home</a></li>
-        <% for (var i in theme.menu){ %>
-          <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
-        <% } %>
-        <li><a id="mobile-menu-close" class="main-nav-link" href="#">Close the menu</a></li>
       </ul>
     </nav>
   </div>

@@ -1,4 +1,9 @@
 (function docReady($) {
+  // no email address crawling
+  var m = '&#118;&#x0069;&#x0063;&#116;&#x006F;&#114;&#102;&#101;&#108;&#100;&#101;&#114;&#x0040;&#x0067;&#x006D;&#97;&#105;&#108;&#x002E;&#x0063;&#x006F;&#x006D;';
+  var $article = $('.article-inner');
+  $article.html($article.html().replace('me@example.com', $('<div/>').html(m).text()));
+
   // Contact form
   function checkEmail() {
     var $f = $('#Field2');
@@ -32,14 +37,25 @@
 
   // Mobile menu
   var $sidenav = $('.side-nav');
-
-  $('#mobile-menu').click(function openMobileMenu(e) {
+  var $container = $('.container');
+  function openMobileMenu() {
+    $sidenav.animate({left: 0}, 300);
+    $container.animate({opacity: 0.25}, 300);
+    $container.on('click', closeMobileMenu);
+  }
+  function closeMobileMenu() {
+    $sidenav.animate({left: '-105%'}, 300);
+    $container.animate({opacity: 1}, 300).unbind();
+  }
+  $('#mobile-menu').click(function toggleMobileMenu(e) {
     e.stopPropagation();
-    $sidenav.css('left', 0);
+    if (parseInt($sidenav.css('left'), 10) !== 0) {
+      openMobileMenu();
+    } else {
+      closeMobileMenu();
+    }
   });
-  $('#mobile-menu-close').click(function closeMobileMenu() {
-    $sidenav.css('left', '-105%');
-  });
+  $('#mobile-menu-close').click(closeMobileMenu);
 
   // Share
   $('body').on('click', function closeShareBox() {

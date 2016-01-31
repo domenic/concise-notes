@@ -2,8 +2,7 @@
   padding: 20px 50px 5px 50px
   font-size: 16px
   background-color: white
-  sides-shadow()
-  top-and-sides-shadow()
+  shadows()
 
 .article-header
   h1
@@ -120,6 +119,18 @@ $article-share-link
   padding-top: 10px
   a
     font-size: 1.2rem
+  &.post-nav-prev a:after
+    font-family: FontAwesome
+    content: '\f054'
+    font-size: 12px
+    vertical-align: middle
+    margin-left: 4px
+  &.post-nav-next a:before
+    font-family: FontAwesome
+    content: '\f053'
+    font-size: 12px
+    vertical-align: middle
+    margin-right: 4px
 
 .post-navigation
   margin-top: 20px
@@ -153,3 +164,4 @@ $article-share-link
 blockquote
   border-left: 5px solid link-color
   font-style: italic
+  margin: 20px 0 20px -10px
