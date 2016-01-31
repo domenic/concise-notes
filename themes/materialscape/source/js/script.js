@@ -2,7 +2,9 @@
   // no email address crawling
   var m = '&#118;&#x0069;&#x0063;&#116;&#x006F;&#114;&#102;&#101;&#108;&#100;&#101;&#114;&#x0040;&#x0067;&#x006D;&#97;&#105;&#108;&#x002E;&#x0063;&#x006F;&#x006D;';
   var $article = $('.article-inner');
-  $article.html($article.html().replace('me@example.com', $('<div/>').html(m).text()));
+  if ($article.length) {
+    $article.html($article.html().replace('me@example.com', $('<div/>').html(m).text()));
+  }
 
   // Contact form
   function checkEmail() {
