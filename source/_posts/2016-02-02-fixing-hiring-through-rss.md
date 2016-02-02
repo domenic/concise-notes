@@ -28,8 +28,8 @@ categories:
 
 This blog post is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a> by Victor Felder.
 
-*I'm [@_vhf](https://twitter.com/_vhf) on Twitter, please feel free to follow me. I'll probably be blogging again about other RSS-related things because unlike a Norwegian Blue parrot, web feed's not dead<sup id="a1"><a href="#f1" title="Jump to footnote">1</a></sup>.*
+*I'm [@_vhf](https://twitter.com/_vhf) on Twitter, please feel free to follow me. I'll probably be blogging again about other RSS-related things because unlike a Norwegian Blue parrot, web feed are not dead<sup id="a1"><a href="#f1" title="Jump to footnote">1</a></sup>.*
 
 ---
 
-<b id="f1">1</b> Although (according to [Google Trends](https://www.google.com/trends/explore#q=%2Fm%2F035c93%2C%20%2Fm%2F0n5tx&cmpt=q&tz=Etc%2FGMT-1)) interest for web feeds in the general public has been declining since its peak in December 2005, more than a third of the top 1,000,000 most visited websites are providing an XML feed according to [builtwith](http://trends.builtwith.com/feeds/). Please get in touch if you have relevant data, e.g. if you know whether this &gt;33% statistic is in an up or down trend. We could even mine [Common Crawl](https://commoncrawl.org/) for XML feeds presence with subdomain granularity. Any help much appreciated. <a href="#a1" title="Jump back to footnote reference">↩</a>
+<b id="f1">1</b> Although (according to [Google Trends](https://www.google.com/trends/explore#q=%2Fm%2F035c93%2C%20%2Fm%2F0n5tx&cmpt=q&tz=Etc%2FGMT-1)) interest for web feeds in the general public has been steadily declining since December 2005, more than a third of the top 1,000,000 most visited websites are providing an XML feed according to [builtwith](http://trends.builtwith.com/feeds/). Please get in touch if you have relevant data, e.g. if you know whether this &gt;33% statistic is in a down- or uptrend. We could even mine [Common Crawl](https://commoncrawl.org/) for XML feeds presence with subdomain granularity. Any help much appreciated. <a href="#a1" title="Jump back to footnote reference">↩</a>
