@@ -18,7 +18,7 @@ A colleague had created `File.ext` on our website hosted on github pages but pri
     File
     $ git add File && git commit -m "add File"
     $ mv File file && ls
-    a
+    file
     $ git add file && git status
     On branch master
     nothing to commit, working directory clean
