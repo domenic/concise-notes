@@ -1,6 +1,6 @@
 <footer class="page-footer blue-grey darken-3">
   <%- partial('_partial/footer-content') %>
   <div class="footer-copyright blue-grey darken-3">
-    all content &amp; design &copy; copyright <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+    unless otherwise stated, all content &amp; design &copy; copyright <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %> &mdash; <span class="post-count"><%= totalcount(site) %> words total</span><br>
   </div>
 </footer>
