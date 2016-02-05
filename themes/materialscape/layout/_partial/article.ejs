@@ -48,7 +48,13 @@
         <% if (page != true) { %>
         <div class="col s6 right-align">
           <div class="article-footer-right">
-            <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">share</a> or <a href="<%= config.repo_url %>/edit/master/source/<%= post.source %>" class="article-suggest-modification">suggest a modification</a>
+            <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">
+              <span class="text">share</span>
+            </a>
+            or
+            <a href="<%= config.repo_url %>/edit/master/source/<%= post.source %>" class="article-suggest-modification">
+              <span class="text">suggest a modification</span>
+            </a>
           </div>
         </div>
         <% } %>
