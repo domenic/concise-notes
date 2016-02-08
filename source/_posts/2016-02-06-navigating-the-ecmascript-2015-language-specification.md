@@ -17,17 +17,17 @@ Here is one I encountered a few minutes ago on IRC:
 
 Well, explaining the reason why &mdash; the design decisions which led to this "limitation" is not so easy. Finding what the specification says, on the other hand, is not so hard.
 
-We'll start here: http://ecma-international.org/ecma-262/6.0/ and we're looking for the part which talks about accessing properties (accessing any properties, in fact).
+We'll start here: https://tc39.github.io/ecma262/ and we're looking for the part which talks about accessing properties (accessing any properties, in fact).
 
 If you don't know where to look, quickly find the [corresponding MDN page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#Left-hand-side_expressions) and see that it's called a "property accessor" and that it's a left-hand-side expression.
 
-Back to the ECMAScript specification, find the index at the beginning of the page. `12.3 Left-Hand-Side Expressions`, good. [`12.3.2 Property Accessors`](http://www.ecma-international.org/ecma-262/6.0/#sec-property-accessors), perfect!
+Back to the ECMAScript specification, find the index at the beginning of the page. `12.3 Left-Hand-Side Expressions`, good. [`12.3.2 Property Accessors`](https://tc39.github.io/ecma262/#sec-property-accessors), perfect!
 
 Now, we want to know what can be used as `name` in the following syntax: `object.name`, right? It's pretty clear:
 
 `MemberExpression . IdentifierName`.
 
-But what is an `IdentifierName`? A quick search in the page brings us to the following section: [`11.6.1 Identifier Names`](http://www.ecma-international.org/ecma-262/6.0/#sec-identifier-names).
+But what is an `IdentifierName`? A quick search in the page brings us to the following section: [`11.6.1 Identifier Names`](https://tc39.github.io/ecma262/#sec-identifier-names).
 
     IdentifierName ::
         IdentifierStart
